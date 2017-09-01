@@ -1,12 +1,12 @@
 ////////////////////////////////
 // Default Logging Parameters //
 ////////////////////////////////
-#define ENABLE_TIME_LOG       true
-#define ENABLE_CALCULATED_LOG true
-#define ENABLE_ACCEL_LOG      true
-#define ENABLE_GYRO_LOG       true
-#define ENABLE_MAG_LOG        true
-#define ENABLE_QUAT_LOG       false
+#define ENABLE_TIME_LOG       false
+#define ENABLE_CALCULATED_LOG false
+#define ENABLE_ACCEL_LOG      false
+#define ENABLE_GYRO_LOG       false
+#define ENABLE_MAG_LOG        false
+#define ENABLE_QUAT_LOG       true
 #define ENABLE_EULER_LOG      false
 #define ENABLE_HEADING_LOG    false
 
@@ -57,6 +57,8 @@
 /////////////////////
 // Serial Commands //
 /////////////////////
+#define START_LOGGING     'J' // Enables SD/UART logging
+#define STOP_LOGGING      'K' // Disables SD/UART logging
 #define PAUSE_LOGGING     ' ' // Space - Pause SD/UART logging
 #define ENABLE_TIME       't' // Enable/disable time log (milliseconds)
 #define ENABLE_ACCEL      'a' // Enable/disable accelerometer log (ax, ay, az)

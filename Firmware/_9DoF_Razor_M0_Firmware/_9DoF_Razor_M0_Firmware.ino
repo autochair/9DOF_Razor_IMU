@@ -416,6 +416,18 @@ void parseSerialInput(char c)
     flashEnableSerialLogging.write(enableSerialLogging);
 #endif
     break;
+    case START_LOGGING: // Pause logging on SPACE
+    enableSerialLogging = true;
+#ifdef ENABLE_NVRAM_STORAGE
+    flashEnableSerialLogging.write(enableSerialLogging);
+#endif
+    break;
+    case STOP_LOGGING: // Pause logging on SPACE
+    enableSerialLogging = false;
+#ifdef ENABLE_NVRAM_STORAGE
+    flashEnableSerialLogging.write(enableSerialLogging);
+#endif
+    break;
   case ENABLE_TIME: // Enable time (milliseconds) logging
     enableTimeLog = !enableTimeLog;
 #ifdef ENABLE_NVRAM_STORAGE
